@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 
 app.get('/likes', async (req, res) => {
     try {
-        const universeId = '111033478539192'; // Replace with your actual Universe ID
+        const universeId = '7333299491'; // Replace with your actual Universe ID
         const response = await axios.get(`https://games.roblox.com/v1/games?universeIds=${universeId}`);
         const likes = response.data.data[0].upVotes;
         res.json({ likes });
